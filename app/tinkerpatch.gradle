@@ -1,12 +1,12 @@
 apply plugin: 'tinkerpatch-support'
+
 import java.util.regex.Matcher
 import java.util.regex.Pattern
-
 /**
  * TODO: 请按自己的需求修改为适应自己工程的参数
  */
 def bakPath = file("${buildDir}/bakApk/")
-def baseInfo = "app-1.0.0-0803-11-56-37" //正常打包后在app/build/bakApk目录下的名字替换此处
+def baseInfo = "app-1.0.0-0301-15-43-53" //正常打包后在app/build/bakApk目录下的名字替换此处
 def variantName = "release"
 
 /**
@@ -109,10 +109,6 @@ tinkerPatch {
         keepDexApply = false
     }
 }
-
-import java.util.regex.Matcher
-import java.util.regex.Pattern
-
 /**
  * 如果只想在Release中打开tinker，可以把tinkerEnable赋值为这个函数的return
  * @return 是否为release
